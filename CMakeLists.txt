@@ -98,7 +98,7 @@ check_minimal_cxx_standard(11 ENFORCE)
 option(BUILD_BENCHMARK "Build the benchmarks" OFF)
 option(BUILD_EXAMPLES "Build the examples" ON)
 option(BUILD_UTILS "Build the utils" OFF)
-option(GENERATE_PYTHON_STUBS "Generate the Python stubs associated to the Python library" OFF)
+option(GENERATE_PYTHON_STUBS "Generate the Python stubs associated to the Python library" ON)
 option(BUILD_WITH_COMMIT_VERSION "Build libraries by setting specific commit version" OFF)
 
 if(DEFINED BUILD_UNIT_TESTS)
@@ -119,13 +119,13 @@ option(BUILD_WITH_COLLISION_SUPPORT
        "Build the library with the collision support (required HPP-FCL)" OFF)
 option(BUILD_WITH_AUTODIFF_SUPPORT
        "Build the library with the automatic differentiation support (via CppAD)" OFF)
-option(BUILD_WITH_CASADI_SUPPORT "Build the library with the support of CASADI" OFF)
+option(BUILD_WITH_CASADI_SUPPORT "Build the library with the support of CASADI" ON)
 # cppadcodgen don't build well with CL
 if(NOT WIN32)
   option(BUILD_WITH_CODEGEN_SUPPORT
          "Build the library with the support of code generation (via CppADCodeGen)" OFF)
 endif()
-option(BUILD_WITH_OPENMP_SUPPORT "Build the library with the OpenMP support" OFF)
+option(BUILD_WITH_OPENMP_SUPPORT "Build the library with the OpenMP support" ON)
 option(BUILD_WITH_EXTRA_SUPPORT "Build the library with extra algorithms support" OFF)
 cmake_dependent_option(
   BUILD_PYTHON_BINDINGS_WITH_BOOST_MPFR_SUPPORT
